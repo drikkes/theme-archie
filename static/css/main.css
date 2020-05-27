@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap');
 /* Markdown */
 :root{
---maincolor: red;
+--maincolor: blue;
 --bordercl:rebeccapurple;
 --callouctcolor:dodgerblue;
 --hovercolor:navy;
@@ -36,6 +36,8 @@ hr {
   border: 0;
   border-top: 3px dotted var(--bordercl);
   margin: 1em 0;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 blockquote {
@@ -225,4 +227,29 @@ svg{
     border-radius: 4px;
     margin-left: 6px;
     background-color: #f9f2f4;
+}
+
+.photos-grid-container {
+  padding-top: 5px;
+}
+
+.photos-grid-container a {
+  border-bottom: 0px;
+}
+
+.photos-grid-container a:hover {
+  background-color: transparent;  
+}
+
+.archive_categories {
+  padding-top: 5px;
+}
+
+main.list {
+  padding-top: 5px;
+}
+
+section.microblog {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

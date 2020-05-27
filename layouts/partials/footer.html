@@ -3,7 +3,8 @@
 {{- range $index, $key := .Site.Params.Social -}}
 <a class="soc" href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>|
 {{- end -}} ⚡️
-	{{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} | {{ end }} <a href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+	Built with <a href="https://gohugo.io">Hugo</a> | 
+    {{ .Site.Params.description | safeHTML }}  
 </footer>
 {{ if not .Site.IsServer }}
 {{ template "_internal/google_analytics_async.html" . }}
@@ -14,4 +15,5 @@
       feather.replace()
 </script>
 {{- end }}
+
 
