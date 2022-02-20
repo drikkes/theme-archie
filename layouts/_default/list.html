@@ -6,7 +6,7 @@
 {{ end }}
 
 <ul class="posts">
-	{{- range .Site.Pages -}}
+	{{- range .Pages -}}
 		{{- if (not (in (.Data.Params.excludedTypes | default (slice "page")) .Type)) -}}
 		<li class="post">
           {{ if .Title }}
