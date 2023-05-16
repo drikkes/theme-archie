@@ -11,9 +11,11 @@
 			{{ .Content }}
 		</section>
 {{ else }}
+
 		<section class="body microblog">
 			{{ .Content }}
 		</section>
+		<div class="meta">Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
 {{ end }}
 
 		<div class="post-tags">
@@ -32,4 +34,3 @@
 	</article>
 </main>
 {{ end }}
-
