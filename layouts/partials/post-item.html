@@ -1,9 +1,9 @@
-<section class="list-item">
+<section class="list-item h-entry">
 	  {{ if .Title }}
-	<h1 class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h1>
+	<h1 class="title p-name"><a href="{{ .RelPermalink }}" class="p-name">{{.Title}}</a></h1>
 	  {{ end }}
-	<a href="{{ .RelPermalink }}" style="border-bottom: 0px;"><time>{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</time></a>
-	<p><div class="description">
+	<a href="{{ .Permalink }}" style="border-bottom: 0px;" class="u-url"><time datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}" class="dt-published">{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</time></a>
+	<p><div class="description p-summary">
 	  {{ if .Title }}
 		{{ if isset .Params "description" }}
 		{{ .Description }}
@@ -11,8 +11,8 @@
 		{{ .Summary }}…
 		{{ end }}
 	</div></p>
-	<p><a href="{{ .RelPermalink }}">Read more ⟶</a></p>                      
+	<p><a href="{{ .RelPermalink }}">Read more ⟶</a></p>
 	  {{ else }}
-	  <p>{{ .Content }}</p>
+	  <p class="e-content">{{ .Content }}</p>
 	  {{ end }}
 </section>
