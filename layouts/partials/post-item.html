@@ -3,16 +3,18 @@
 	<h1 class="title p-name"><a href="{{ .RelPermalink }}" class="p-name">{{.Title}}</a></h1>
 	  {{ end }}
 	<a href="{{ .Permalink }}" style="border-bottom: 0px;" class="u-url"><time datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}" class="dt-published">{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</time></a>
-	<p><div class="description p-summary">
+
 	  {{ if .Title }}
+	<div class="description p-summary">
 		{{ if isset .Params "description" }}
 		{{ .Description }}
 		{{ else }}
 		{{ .Summary }}…
+	</div>
 		{{ end }}
-	</div></p>
+
 	<p><a href="{{ .RelPermalink }}">Read more ⟶</a></p>
 	  {{ else }}
-	  <p class="e-content">{{ .Content }}</p>
+	  <div class="e-content">{{ .Content }}</div>
 	  {{ end }}
 </section>
