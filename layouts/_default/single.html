@@ -18,6 +18,10 @@
 		<div class="meta">Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
 {{ end }}
 
+{{ if and (eq .Type "post") (.Site.Params.include_conversation) }}
+		<script src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
+{{ end }}
+
 		<div class="post-tags">
 			{{ if ne .Type "page" }}
 			{{ if gt .Params.tags 0 }}
