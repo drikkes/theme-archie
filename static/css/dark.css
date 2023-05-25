@@ -112,4 +112,12 @@ a:hover {
   background-color: blue;
 }
 
+/* Conversation.js styling */
 
+.microblog_conversation {
+  border-top: 3px dotted var(--maincolor);
+}
+
+.microblog_time a {
+  color: #dbd4d3;
+}
